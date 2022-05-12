@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import { Header } from './Header';
 import { Footer } from './Footer';
-import { FaRocket } from 'react-icons/fa';
+import { Launches } from 'pages/Launches';
+
+import { FaMarsStroke, FaRocket, FaWeightHanging } from 'react-icons/fa';
 
 export const Main = () => {
   const [rockets, setRockets] = useState([]);
@@ -13,10 +17,14 @@ export const Main = () => {
       description
       wikipedia
       id
-    }
-    company {
-        ceo
+      mass {
+        kg
       }
+    }
+    missions {
+        name
+      }
+    
   }
     `;
 
@@ -47,14 +55,19 @@ export const Main = () => {
             SpaceX designs, manufactures and launches advanced rockets and
             spacecraft.
           </h4>
-          <button className='btn'>LATEST LAUNCHES</button>
+          <Link to='/launches'>
+            <button className='btn'>LATEST LAUNCHES</button>
+          </Link>
         </div>
         <div className='right-main'>
           {rockets.map((rocket) => (
             <div key={rocket.id} className='rocket'>
               <h3 className='rocket-title'>{rocket.name}</h3>
-              {/* <p>{rockets.company.ceo}</p> */}
               <p>{rocket.description}</p>
+              <p>
+                {rocket.mass.kg}
+                kg
+              </p>
               <a href={rocket.wikipedia}>
                 <FaRocket />
               </a>
@@ -62,6 +75,7 @@ export const Main = () => {
           ))}
         </div>
       </div>
+      {/* <Launches rockets={rockets} /> */}
 
       <Footer />
     </>
