@@ -47,6 +47,7 @@ export const Main = () => {
             SpaceX designs, manufactures and launches advanced rockets and
             spacecraft.
           </h4>
+          <button className='btn'>LATEST LAUNCHES</button>
         </div>
         <div className='right-main'>
           {rockets.map((rocket) => (
@@ -61,6 +62,7 @@ export const Main = () => {
           ))}
         </div>
       </div>
+
       <Footer />
     </>
   );

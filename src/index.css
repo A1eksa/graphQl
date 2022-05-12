@@ -32,7 +32,8 @@ a:link {
 }
 
 h1 {
-  font-size: 6.5rem;
+  /* margin-top: 1rem; */
+  font-size: 6.25rem;
   font-weight: 700;
 }
 
@@ -80,6 +81,31 @@ p {
   font-size: 1rem;
 }
 
+.btn {
+  background-color: transparent;
+  color: #fff;
+  position: relative;
+  min-width: 130px;
+  padding: 1rem;
+  margin: 30px 0 0;
+  border: 2px solid #fff;
+}
+
+.btn .text {
+  color: #fff;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  -webkit-transition: color 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: color 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: black;
+  text-decoration: none;
+}
+
 /*   STYLING HEADER   */
 
 .header-wrapper {
@@ -98,6 +124,11 @@ p {
 .logo {
   width: 12rem;
   filter: invert(90%);
+}
+
+.spacex-home {
+  text-decoration: none;
+  filter: invert(70%);
 }
 
 /*   STYLING FOOTER   */

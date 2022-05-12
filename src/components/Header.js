@@ -4,7 +4,7 @@ import { VscRocket } from 'react-icons/vsc';
 import logo from '../images/logo.png';
 
 export const Header = () => {
-  const style = { color: 'white', fontSize: '1.5em' };
+  const style = { fill: 'white', fontSize: '1.5em' };
   return (
     <header className='header-wrapper'>
       <img src={logo} className='logo' />
