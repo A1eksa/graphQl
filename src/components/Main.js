@@ -50,14 +50,14 @@ export const Main = () => {
         </div>
         <div className='right-main'>
           {rockets.map((rocket) => (
-            <article key={rocket.id}>
-              <h3>{rocket.name.toUpperCase()}</h3>
+            <div key={rocket.id} className='rocket'>
+              <h3 className='rocket-title'>{rocket.name}</h3>
               {/* <p>{rockets.company.ceo}</p> */}
               <p>{rocket.description}</p>
               <a href={rocket.wikipedia}>
                 <FaRocket />
               </a>
-            </article>
+            </div>
           ))}
         </div>
       </div>

@@ -1,12 +1,16 @@
 import React from 'react';
-import { SiSpacex } from 'react-icons/si';
+import { VscRocket } from 'react-icons/vsc';
 
 import logo from '../images/logo.png';
 
 export const Header = () => {
+  const style = { color: 'white', fontSize: '1.5em' };
   return (
     <header className='header-wrapper'>
-      <SiSpacex className='space-x' />
+      <img src={logo} className='logo' />
+      <a className='spacex-home' href='https://www.spacex.com/'>
+        <VscRocket value={style} />
+      </a>
     </header>
   );
 };

@@ -27,10 +27,13 @@ code {
   --accent-pink: #ad586f;
 }
 
+a:link {
+  text-decoration: none;
+}
+
 h1 {
   font-size: 6.5rem;
   font-weight: 700;
-  /* letter-spacing: 5px; */
 }
 
 h4 {
@@ -43,12 +46,20 @@ p {
 }
 
 /*  STYLING MAIN   */
+
 .main-wrapper {
-  /* background-image: url(./images/launch.jpg); */
   display: flex;
   padding: 5% 10%;
   max-width: 1440px;
   height: 100vh;
+}
+
+.rocket {
+  margin: 1rem 2rem 2rem 1rem;
+}
+
+.rocket-title {
+  text-transform: uppercase;
 }
 
 .left-main {
@@ -57,7 +68,7 @@ p {
 }
 
 .right-main {
-  padding: 4rem 4rem 4rem 2rem;
+  padding: 6rem 4rem 4rem 2rem;
   max-width: 45%;
 }
 
@@ -69,23 +80,27 @@ p {
   font-size: 1rem;
 }
 
-/*   Header styling   */
+/*   STYLING HEADER   */
 
 .header-wrapper {
   background-color: var(--overlay);
   box-sizing: border-box;
   width: 100%;
-  padding: 2rem 2rem 2.5rem 2rem;
+  padding: 2rem 4rem 2.5rem 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: fixed;
   top: 0;
-
   z-index: 3;
 }
 
-/*   Footer styling   */
+.logo {
+  width: 12rem;
+  filter: invert(90%);
+}
+
+/*   STYLING FOOTER   */
 
 .footer-wrapper {
   width: 100%;
@@ -96,5 +111,5 @@ p {
   bottom: 0;
   position: fixed;
   padding: 2rem 2rem 2rem 2rem;
-  z-index: 2;
+  /* z-index: 2; */
 }
