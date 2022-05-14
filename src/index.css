@@ -6,6 +6,7 @@ body {
   color: var(--grey-100);
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0;
