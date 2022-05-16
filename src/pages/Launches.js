@@ -45,13 +45,13 @@ export const Launches = () => {
             <h3>{launch.mission_name}</h3>
             <p>{launch.launch_date_local}</p>
             {/* <div>
-            <ReactPlayer
-              controls
-              width='480px'
-              height='240px'
-              url={launch.links.video_link}
-            />
-          </div> */}
+              <ReactPlayer
+                controls
+                width='480px'
+                height='240px'
+                url={launch.links.video_link}
+              />
+            </div> */}
           </div>
         ))}
       </div>

@@ -48,7 +48,7 @@ export const Launchpads = ({ rockets }) => {
         <img className='back-icon' src={backIcon} />
         Back
       </Link>
-      <div className='launch-wrapper'>
+      <div className='launchpads-wrapper'>
         {launchpads.map((launchpad) => (
           <div key={launchpad.id} className='launchpad'>
             <h2>{launchpad.name}</h2>

@@ -16,6 +16,7 @@ code {
 :root {
   --background: rgba(53, 32, 7, 0.5);
   --overlay: rgba(19, 11, 2, 0.4);
+  --overlay-launch: rgba(91, 20, 20, 0.081);
   --grey-100: #dedede;
   --accent-yellow: #e1ad01;
   --accent-pink: #ad586f;
@@ -47,7 +48,7 @@ p {
 
 .main-wrapper {
   display: flex;
-  padding: 5% 10%;
+  padding: 2.5% 5%;
   height: 100vh;
   background-image: url(./images/launch.jpg);
   background-blend-mode: multiply;
@@ -67,7 +68,6 @@ p {
 
 .btn-wrapper {
   display: flex;
-
   justify-content: flex-start;
 }
 
@@ -76,6 +76,7 @@ p {
   justify-content: space-evenly;
   padding-left: 20px;
 }
+
 .rocket-title {
   text-transform: uppercase;
 }
@@ -86,7 +87,7 @@ p {
 }
 
 .right-main {
-  padding: 6rem 4rem 4rem 2rem;
+  padding: 6rem 2rem 4rem 2rem;
   max-width: 45%;
 }
 
@@ -161,10 +162,11 @@ p {
 /*  STYLING LAUNCHES  */
 
 .launch-wrapper {
-  padding: 5% 10%;
+  padding: 7% 10%;
   /* height: 100vh; */
   width: 100vw;
-  background-color: var(--background-launches);
+  background-color: #000;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 3rem;
@@ -178,23 +180,44 @@ p {
   transition-property: all;
   transition-duration: 0.4s;
   position: relative;
-  border-radius: 8px;
-  background-color: var(--level-three);
+  /* border-radius: 8px; */
+  border-left: 5px solid var(--grey-100);
+  /* background-color: var(--overlay-launch); */
 }
 
 .launch:hover {
-  background-color: var(--level-two);
+  background-color: var(--overlay-launch);
   transform: scale(1.02);
   cursor: pointer;
 }
 
 /*   LAUNCHPADS STYLING   */
 
+.launchpads-wrapper {
+  padding: 5% 10%;
+
+  width: 100vw;
+  background-image: url(./images/mars.jpg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 3rem;
+  grid-row-gap: 3rem;
+
+  background-blend-mode: multiply;
+  background-color: var(--background);
+  color: var(--grey-100);
+}
+
+.launchpad {
+  padding: 3rem;
+  border-left: 5px solid var(--grey-100);
+}
+
 .back-button {
   top: 0;
   left: 0;
   position: absolute;
-  margin: 50px;
+  margin: 2rem 2rem;
   color: white;
   display: flex;
   align-items: center;
@@ -244,9 +267,6 @@ p {
     flex-direction: column;
     padding: 1rem 1rem;
     height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
   }
 
   .left-main {
@@ -282,62 +302,70 @@ p {
   .footer-wrapper {
     padding: 1rem;
   }
+}
 
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .logo {
-      width: 7rem;
-      padding-top: 1rem;
-    }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .logo {
+    width: 10rem;
+    padding-top: 1rem;
+  }
 
-    .twitter {
-      width: 1rem;
-      filter: invert(70%);
-    }
+  .twitter {
+    width: 1rem;
+    filter: invert(70%);
+  }
 
-    /*  MAIN STYLES */
+  /*  MAIN STYLES */
 
-    .main-wrapper {
-      display: flex;
-      flex-direction: row;
-      padding: 1rem 1rem;
-      height: 100vh;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-    }
+  .main-wrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 5% 4% 7% 4%;
+    height: 100vh;
+  }
 
-    .left-main {
-      max-width: 45%;
-      padding: 5rem 2.5rem 2rem 2.5rem;
-    }
+  .left-main {
+    max-width: 100%;
+    padding: 5rem 2.5rem 2rem 2.5rem;
+    height: 100vh;
+  }
 
-    .right-main {
-      max-width: 45%;
-      padding: 2rem 2rem 2rem 1rem;
-    }
+  .right-main {
+    max-width: 45%;
+    padding: 2rem 2rem 8rem 1rem;
+    height: 100vh;
+  }
 
-    h1 {
-      font-size: 2rem;
-      padding-top: 2rem;
-    }
+  h1 {
+    font-size: 3rem;
+    padding-top: 2rem;
+  }
 
-    h4 {
-      font-size: 17px;
-    }
+  h4 {
+    font-size: 17px;
+  }
 
-    p {
-      font-size: 14px;
-      line-height: 1.5rem;
-    }
+  p {
+    font-size: 14px;
+    line-height: 1.5rem;
+  }
 
-    .rocket {
-      margin: 1rem;
-    }
+  .rocket {
+    margin: 1rem;
+  }
 
-    /*   FOOTER STYLING   */
+  /*   FOOTER STYLING   */
 
-    .footer-wrapper {
-      padding: 1rem;
-    }
+  .footer-wrapper {
+    padding: 1rem;
+  }
+
+  .btn {
+    padding: 0.7rem;
+    margin: 30px 0 0;
+  }
+
+  .header-wrapper {
+    padding: 1rem 2rem 1.75rem 2rem;
   }
 }
