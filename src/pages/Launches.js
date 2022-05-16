@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
+// import ReactPlayer from 'react-player';
 
-export const Launches = ({ rockets }) => {
+import { Launchpads } from './Launchpads';
+
+export const Launches = () => {
   const [launches, setLaunches] = useState([]);
+
   console.log(launches, 'launches');
 
   const LAUNCHES_QUERY = `
@@ -19,9 +23,10 @@ export const Launches = ({ rockets }) => {
   }
   
     `;
+  const apiURL = 'https://api.spacex.land/graphql/';
 
   useEffect(() => {
-    fetch('https://api.spacex.land/graphql/', {
+    fetch(apiURL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -30,17 +35,27 @@ export const Launches = ({ rockets }) => {
     })
       .then((res) => res.json())
       .then((data) => setLaunches(data.data.launchesPast));
-  }, [LAUNCHES_QUERY]);
+  }, []);
 
   return (
-    <div>
-      {launches.map((launch) => (
-        <div key={launch.id} className='launch-wrapper'>
-          <h3>{launch.mission_name}</h3>
-          <p>{launch.launch_year}</p>
-          <img src={launch.links.flickr_images} className='launch-img'></img>
-        </div>
-      ))}
-    </div>
+    <>
+      <div className='launch-wrapper'>
+        {launches.map((launch) => (
+          <div key={launch.id} className='launch'>
+            <h3>{launch.mission_name}</h3>
+            <p>{launch.launch_date_local}</p>
+            {/* <div>
+            <ReactPlayer
+              controls
+              width='480px'
+              height='240px'
+              url={launch.links.video_link}
+            />
+          </div> */}
+          </div>
+        ))}
+      </div>
+      <Launchpads />
+    </>
   );
 };

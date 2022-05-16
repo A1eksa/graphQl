@@ -1,10 +1,10 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 import { Header } from './Header';
 import { Footer } from './Footer';
-
-import { FaMarsStroke, FaRocket } from 'react-icons/fa';
+// import { Launches } from 'pages/Launches';
 
 export const Main = () => {
   const [rockets, setRockets] = useState([]);
@@ -79,25 +79,16 @@ export const Main = () => {
     <div key={rocket.id} className='rocket'>
       <h3 className='rocket-title'>{rocket.name}</h3>
       <p>{rocket.description}</p>
-      {'byWeight' ? (
-        <p>
-          {rocket.mass.kg}
-          kg
-        </p>
-      ) : (
-        ''
-      )}
-      {/* <p>
-        {rocket.mass.kg}
-        kg
-      </p>
       <p>
+        {rocket.mass.kg}
+        <span>&nbsp;</span>kg heavy and<span>&nbsp;</span>
         {rocket.height.meters}
-        meters
+        <span>&nbsp;</span>meters long
+      </p>
+      {/* <p>
+        {rocket.height.meters}
+        <span>&nbsp;</span>meters
       </p> */}
-      <a href={rocket.wikipedia}>
-        <FaRocket />
-      </a>
     </div>
   ));
 
@@ -111,7 +102,9 @@ export const Main = () => {
             <span className='quote'>
               'A future worth getting excited about'
             </span>{' '}
-            <span className='author'>by Elon Musk</span>
+            <span className='author'>
+              <span>&nbsp;</span>Elon Musk
+            </span>
           </h3>
           <h4>
             SpaceX designs, manufactures and launches advanced rockets and
@@ -123,16 +116,25 @@ export const Main = () => {
         </div>
         <div className='right-main'>
           <section className='sorter'>
-            <h4 className='sort-label'>Sort by:</h4>
-            <div className='btn-sort byWeigth'>
-              <button className='btn' value='byWeight' onClick={handleSorting}>
-                Sort by weight
-              </button>
-            </div>
-            <div className='btn-sort byHeight'>
-              <button className='btn' value='byHeight' onClick={handleSorting}>
-                Sort by height
-              </button>
+            <div className='btn-wrapper'>
+              <div className='btn-sort byWeigth'>
+                <button
+                  className='btn'
+                  value='byWeight'
+                  onClick={handleSorting}
+                >
+                  Sort by weight
+                </button>
+              </div>
+              <div className='btn-sort byHeight'>
+                <button
+                  className='btn'
+                  value='byHeight'
+                  onClick={handleSorting}
+                >
+                  Sort by height
+                </button>
+              </div>
             </div>
           </section>
           {RocketList}
