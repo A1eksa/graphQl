@@ -1,11 +1,10 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+
 import arrow from '../images/arrow.png';
 
 import { Header } from './Header';
 import { Footer } from './Footer';
-// import { Launches } from 'pages/Launches';
+
 
 export const Main = () => {
   const [rockets, setRockets] = useState([]);
@@ -138,7 +137,6 @@ export const Main = () => {
           {RocketList}
         </div>
       </div>
-
       <Footer />
     </>
   );
