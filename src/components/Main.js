@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import arrow from '../images/arrow.png';
 
 import { Header } from './Header';
 import { Footer } from './Footer';
@@ -85,10 +86,6 @@ export const Main = () => {
         {rocket.height.meters}
         <span>&nbsp;</span>meters long
       </p>
-      {/* <p>
-        {rocket.height.meters}
-        <span>&nbsp;</span>meters
-      </p> */}
     </div>
   ));
 
@@ -111,9 +108,9 @@ export const Main = () => {
             spacecraft. Sending humans and cargo into space.
           </h4>
           <h3>Humans on Mars, is it Possible?</h3>
-          <Link to='/launches'>
-            <button className='btn'>LATEST LAUNCHES</button>
-          </Link>
+          <div>
+            <h4>Want to know more? </h4>
+          </div>
         </div>
         <div className='right-main'>
           <section className='sorter'>

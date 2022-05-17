@@ -18,6 +18,7 @@ export const Launchpads = ({ rockets }) => {
     launchpads {
        name
        id
+       details
        location {
         name
          latitude
@@ -53,6 +54,7 @@ export const Launchpads = ({ rockets }) => {
           <div key={launchpad.id} className='launchpad'>
             <h2>{launchpad.name}</h2>
             <h4>{launchpad.location.name}</h4>
+            <p>{launchpad.details}</p>
             <p>{launchpad.location.longitude}</p>
             <p>{launchpad.location.latitude}</p>
           </div>

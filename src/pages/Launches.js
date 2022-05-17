@@ -1,12 +1,20 @@
 import React, { useEffect, useState } from 'react';
-// import ReactPlayer from 'react-player';
+import { Link, useNavigate } from 'react-router-dom';
+import { EmptyState } from 'components/EmptyState';
 
-import { Launchpads } from './Launchpads';
+import backIcon from '../images/backIcon.png';
+// import ReactPlayer from 'react-player';
 
 export const Launches = () => {
   const [launches, setLaunches] = useState([]);
 
   console.log(launches, 'launches');
+
+  const navigate = useNavigate();
+
+  const onButtBackClick = () => {
+    navigate('/');
+  };
 
   const LAUNCHES_QUERY = `
   {
@@ -19,8 +27,10 @@ export const Launches = () => {
         video_link
         flickr_images
       }
+      details
     }
   }
+  
   
     `;
   const apiURL = 'https://api.spacex.land/graphql/';
@@ -39,11 +49,18 @@ export const Launches = () => {
 
   return (
     <>
+      <Link to='/' className='back-button' onClick={onButtBackClick}>
+        <img className='back-icon' src={backIcon} />
+        Back
+      </Link>
+      <h3 className='launches-title'>LATEST LAUNCHES</h3>
       <div className='launch-wrapper'>
         {launches.map((launch) => (
           <div key={launch.id} className='launch'>
             <h3>{launch.mission_name}</h3>
             <p>{launch.launch_date_local}</p>
+            {launch.details ? <p>{launch.details}</p> : <EmptyState />}
+
             {/* <div>
               <ReactPlayer
                 controls
@@ -55,7 +72,6 @@ export const Launches = () => {
           </div>
         ))}
       </div>
-      <Launchpads />
     </>
   );
 };
