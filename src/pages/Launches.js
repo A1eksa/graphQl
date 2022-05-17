@@ -8,8 +8,6 @@ import backIcon from '../images/backIcon.png';
 export const Launches = () => {
   const [launches, setLaunches] = useState([]);
 
-  console.log(launches, 'launches');
-
   const navigate = useNavigate();
 
   const onButtBackClick = () => {
@@ -45,12 +43,12 @@ export const Launches = () => {
     })
       .then((res) => res.json())
       .then((data) => setLaunches(data.data.launchesPast));
-  }, []);
+  }, [LAUNCHES_QUERY]);
 
   return (
     <>
       <Link to='/' className='back-button' onClick={onButtBackClick}>
-        <img className='back-icon' src={backIcon} />
+        <img className='back-icon' alt='back-icon' src={backIcon} />
         Back
       </Link>
       <h3 className='launches-title'>LATEST LAUNCHES</h3>

@@ -1,10 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 
-import arrow from '../images/arrow.png';
-
 import { Header } from './Header';
 import { Footer } from './Footer';
-
 
 export const Main = () => {
   const [rockets, setRockets] = useState([]);
@@ -47,7 +44,7 @@ export const Main = () => {
 
   useEffect(() => {
     fetchRockets(ROCKETS_QUERY);
-  }, [fetchRockets, setRockets]);
+  }, [fetchRockets, setRockets, ROCKETS_QUERY]);
 
   function sortByWeight() {
     return rockets
