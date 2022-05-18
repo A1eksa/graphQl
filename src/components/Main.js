@@ -106,14 +106,12 @@ export const Main = () => {
             SpaceX designs, manufactures and launches advanced rockets and
             spacecraft. Sending humans and cargo into space.
           </h4>
-          <h4>Humans on Mars, is it Possible?</h4>
+          <h4>Humans on Mars, is it possible?</h4>
           <div className='explore-rockets'>
-            <h4>
-              Explore latest launches{' '}
-              <Link to='/launches' className='launch-link'>
-                <img src={explore} className='explore' alt='telescope' />
-              </Link>{' '}
-            </h4>
+            <h4 className='explore-title'>Explore latest launches </h4>
+            <Link to='/launches' className='launch-link'>
+              <img src={explore} className='explore' alt='telescope' />
+            </Link>{' '}
           </div>
         </div>
         <div className='right-main'>
