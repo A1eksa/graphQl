@@ -1,7 +1,10 @@
 import React, { useCallback, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import { Header } from './Header';
 import { Footer } from './Footer';
+
+import explore from '../images/explore.png';
 
 export const Main = () => {
   const [rockets, setRockets] = useState([]);
@@ -103,9 +106,14 @@ export const Main = () => {
             SpaceX designs, manufactures and launches advanced rockets and
             spacecraft. Sending humans and cargo into space.
           </h4>
-          <h3>Humans on Mars, is it Possible?</h3>
-          <div>
-            <h4>Want to know more? </h4>
+          <h4>Humans on Mars, is it Possible?</h4>
+          <div className='explore-rockets'>
+            <h4>
+              Explore latest launches{' '}
+              <Link to='/launches' className='launch-link'>
+                <img src={explore} className='explore' alt='telescope-image' />
+              </Link>{' '}
+            </h4>
           </div>
         </div>
         <div className='right-main'>

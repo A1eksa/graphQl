@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 import logo from '../images/logo.png';
 import twitter from '../images/twitter.png';
@@ -11,16 +11,9 @@ export const Header = () => {
         <img src={logo} alt='spacex-img' className='logo' />
       </a>
 
-      <div className='icon-wrapper'>
-        <Link to='/launches' className='launch-link'>
-          LAUNCHES
-        </Link>
-        <div className='links-wrapper'>
-          <a href='https://twitter.com/elonmusk'>
-            <img src={twitter} alt='twitter-img' className='twitter' />
-          </a>
-        </div>
-      </div>
+      <a href='https://twitter.com/elonmusk'>
+        <img src={twitter} alt='twitter-img' className='twitter' />
+      </a>
     </header>
   );
 };
