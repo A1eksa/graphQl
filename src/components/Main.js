@@ -111,7 +111,7 @@ export const Main = () => {
             <h4>
               Explore latest launches{' '}
               <Link to='/launches' className='launch-link'>
-                <img src={explore} className='explore' alt='telescope-image' />
+                <img src={explore} className='explore' alt='telescope' />
               </Link>{' '}
             </h4>
           </div>
