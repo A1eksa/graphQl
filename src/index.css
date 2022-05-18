@@ -398,14 +398,17 @@ p {
 @media (min-width: 768px) and (max-width: 1023px) {
   .explore-rockets {
     background-color: var(--overlay);
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 8px;
     margin-top: 5rem;
     width: 100%;
   }
 
-  .explore-rockets h4 {
+  .explore-title {
     font: 14px;
+    align-items: center;
+    text-transform: uppercase;
+    color: var(--accent-yellow);
   }
 
   .explore {
@@ -428,7 +431,7 @@ p {
   .main-wrapper {
     display: flex;
     flex-direction: row;
-    padding: 5% 4% 7% 4%;
+    padding: 8% 4% 7% 4%;
 
     height: 100vh;
   }
@@ -451,7 +454,7 @@ p {
   }
 
   h4 {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   p {
@@ -505,5 +508,11 @@ p {
   .launch p {
     font-size: 1.25rem;
     line-height: 1.5rem;
+  }
+
+  .explore-title {
+    color: var(--accent-yellow);
+    align-items: center;
+    text-transform: uppercase;
   }
 }
