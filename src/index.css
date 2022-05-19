@@ -287,6 +287,13 @@ p {
 @media (max-width: 767px) {
   /*  HEADER STYLES  */
 
+  .rocket {
+    margin: 1rem 0.5rem 2rem 0.5rem;
+    background-color: var(--overlay);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+  }
+
   .explore-title {
     font-size: 14px;
   }
@@ -305,11 +312,13 @@ p {
   }
 
   .explore-rockets {
+    display: flex;
+    align-items: center;
+    min-width: 85%;
     background-color: var(--overlay);
     padding: 2rem;
     border-radius: 8px;
     margin-top: 0;
-    max-width: fit-content;
   }
 
   .explore-rockets h4 {
@@ -326,19 +335,20 @@ p {
   /*  MAIN STYLES */
 
   .main-wrapper {
+    padding: 2rem 0;
     display: flex;
     flex-direction: column;
-    padding: 1rem 1rem;
+    /* padding: 1rem 1rem; */
   }
 
   .left-main {
     max-width: 100%;
-    padding: 4rem 2.5rem 0 2.5rem;
+    padding: 3rem 1.5rem 0 1.5rem;
   }
 
   .right-main {
     max-width: 100%;
-    padding: 0.5rem 1rem 8rem 1rem;
+    padding: 1rem;
   }
 
   h1 {
@@ -347,15 +357,12 @@ p {
 
   h4 {
     font-size: 14px;
+    line-height: 1.5rem;
   }
 
   p {
     font-size: 14px;
     line-height: 1.5rem;
-  }
-
-  .rocket {
-    margin: 0.75rem;
   }
 
   /*   FOOTER STYLING   */
