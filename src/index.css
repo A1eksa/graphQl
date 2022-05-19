@@ -285,8 +285,6 @@ p {
 }
 
 @media (max-width: 767px) {
-  /*  HEADER STYLES  */
-
   .rocket {
     margin: 1rem 0.5rem 2rem 0.5rem;
     background-color: var(--overlay);
@@ -368,7 +366,7 @@ p {
   /*   FOOTER STYLING   */
 
   .footer-wrapper {
-    padding: 1rem;
+    padding: 0;
   }
 
   /*   LAUNCH STYLES  */
@@ -398,7 +396,7 @@ p {
   }
 
   .header-wrapper {
-    padding: 1rem 2rem 1.25rem 2rem;
+    padding: 0.5rem 2rem 0.5rem 2rem;
   }
 }
 
