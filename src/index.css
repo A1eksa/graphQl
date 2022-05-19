@@ -408,7 +408,9 @@ p {
     padding: 2rem;
     border-radius: 8px;
     margin-top: 5rem;
-    width: 100%;
+    min-width: 85%;
+    display: flex;
+    align-items: center;
   }
 
   .explore-title {
@@ -521,5 +523,15 @@ p {
     color: var(--accent-yellow);
     align-items: center;
     text-transform: uppercase;
+  }
+
+  .explore-rockets {
+    background-color: var(--overlay);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 5rem;
+    min-width: 85%;
+    display: flex;
+    align-items: center;
   }
 }
