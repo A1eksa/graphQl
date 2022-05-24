@@ -46,9 +46,29 @@ export const Main = () => {
     [setRockets]
   );
 
+  // const fetchRockets = useCallback(
+  //   async () => {
+  //     const rocketData = await fetch(apiURL, {
+  //       method: 'POST',
+  //       headers: { 'Content-Type': 'application/json' },
+  //       body: JSON.stringify({
+  //         query: ROCKETS_QUERY,
+  //       }),
+  //     });
+  //     const parsedData = await rocketData.json();
+  //     const myRockets = parsedData.data.rockets;
+  //     setRockets(myRockets);
+  //   },
+  //   []
+  // );
+
   useEffect(() => {
     fetchRockets(ROCKETS_QUERY);
   }, [fetchRockets, setRockets, ROCKETS_QUERY]);
+
+  // useEffect(() => {
+  //   fetchRockets(ROCKETS_QUERY);
+  // }, []);
 
   function sortByWeight() {
     return rockets

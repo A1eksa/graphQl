@@ -47,11 +47,13 @@ export const Launches = () => {
 
   return (
     <>
-      <Link to='/' className='back-button' onClick={onButtBackClick}>
-        <img className='back-icon' alt='back-icon' src={backIcon} />
-        Back
-      </Link>
-      <h3 className='launches-title'>LATEST LAUNCHES</h3>
+      <div className='launches-title'>
+        <Link to='/' className='back-button' onClick={onButtBackClick}>
+          <img className='back-icon' alt='back-icon' src={backIcon} />
+          Back
+        </Link>
+        <h3>LATEST LAUNCHES</h3>
+      </div>
       <div className='launch-wrapper'>
         {launches.map((launch) => (
           <div key={launch.id} className='launch'>
