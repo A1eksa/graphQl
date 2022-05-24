@@ -49,6 +49,7 @@ p {
   padding: 2.5% 5% 7% 5%;
   height: 100vh;
   min-height: 100vh;
+  /* width: 100vw;  */
   background-position: center;
   background-image: url(./images/launch.jpg);
   background-blend-mode: multiply;
@@ -58,7 +59,8 @@ p {
   position: relative;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  overflow: auto;
+  overflow: hidden;
+  /* overflow auto was causing issues with image */
   scroll-behavior: smooth;
 }
 

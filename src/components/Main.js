@@ -8,6 +8,7 @@ import explore from '../images/explore.png';
 
 export const Main = () => {
   const [rockets, setRockets] = useState([]);
+  console.log(rockets);
 
   const ROCKETS_QUERY = `
   {

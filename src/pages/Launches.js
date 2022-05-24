@@ -58,7 +58,6 @@ export const Launches = () => {
             <h3>{launch.mission_name}</h3>
             <p>{launch.launch_date_local}</p>
             {launch.details ? <p>{launch.details}</p> : <EmptyState />}
-
             {/* <div>
               <ReactPlayer
                 controls
