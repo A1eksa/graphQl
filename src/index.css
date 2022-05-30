@@ -59,7 +59,7 @@ p {
   position: relative;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  overflow: hidden;
+  overflow: auto;
   /* overflow auto was causing issues with image */
   scroll-behavior: smooth;
 }
@@ -98,6 +98,7 @@ p {
   filter: invert(100%);
   transition: 0.3s;
   transform: rotate(0deg);
+  animation: transform;
   padding-left: 2rem;
 }
 
@@ -234,6 +235,7 @@ p {
 
 .launches-title {
   color: var(--grey-100);
+
   background-color: #000;
   min-width: 100vw;
   margin: 0;
@@ -336,21 +338,49 @@ p {
 
   /*  MAIN STYLES */
 
+  /* .main-wrapper {
+    display: flex;
+    padding: 2.5% 5% 1% 5%;
+    height: 100vh;
+    min-height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-image: url(./images/launch.jpg);
+    background-blend-mode: multiply;
+    background-color: var(--background);
+    color: var(--grey-100);
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+   overflow auto was causing issues with image 
+    scroll-behavior: smooth;
+  } */
+
   .main-wrapper {
     padding: 2rem 0;
     display: flex;
     flex-direction: column;
+    /* min-height: 100vh; */
     /* padding: 1rem 1rem; */
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
   }
 
   .left-main {
     max-width: 100%;
     padding: 3rem 1.5rem 0 1.5rem;
+    height: 100vh;
+    overflow: visible;
   }
 
   .right-main {
     max-width: 100%;
     padding: 1rem;
+    height: 100vh;
+    overflow: visible;
   }
 
   h1 {

@@ -41,12 +41,14 @@ export const Main = () => {
       });
       const parsedData = await rocketData.json();
       const myRockets = parsedData.data.rockets;
+      console.log(parsedData);
+      console.log(rocketData);
       setRockets(myRockets);
     },
     [setRockets]
   );
 
-  // const fetchRockets = useCallback(
+  // const fetchRockets =
   //   async () => {
   //     const rocketData = await fetch(apiURL, {
   //       method: 'POST',
@@ -60,7 +62,7 @@ export const Main = () => {
   //     setRockets(myRockets);
   //   },
   //   []
-  // );
+  //
 
   useEffect(() => {
     fetchRockets(ROCKETS_QUERY);
